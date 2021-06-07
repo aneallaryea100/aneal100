@@ -1,0 +1,52 @@
+*{
+	padding:0;
+	margin:0;}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+	.navbar{
+		display: flex;
+		justify-content: space-between;
+		min-height: 30px;
+		padding: ;
+		background-color:#000000 ;
+		align-items: center;
+	}
+
+	.navbar .first span, .navbar .first img{
+       padding: 1px;
+	}
+
+	.navbar .second input[type=text]{
+		padding: 5px;
+		background-color: #404040;
+		color: white;
+		border:none;
+	}
+
+	.navbar .second a{
+		background-color: #fff;
+		padding: 5px 20px 6px 20px;
+		margin-left: -3.9px;
+		background-color: #202020;
+		color: white;
+	}
+
+
+	.navbar .second .gud{
+		padding: 10px;
+		color: white;
+	}
+
+	.navbar .night i{
+		padding: 10px;
+		color: white;
+	}
+
+
+
+	
