@@ -1,0 +1,156 @@
+*{
+	padding:0px;
+	margin:0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+body{
+	width:;
+	background:#F0F0F0;
+}
+
+/*********head***************/
+
+.head{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border:1px solid gray;
+	margin:0px;
+	padding: 15px;
+	background:#FFFFFF; 
+}
+ .head .book{
+	margin: 5px;
+}
+
+.head .close i{
+	margin: 5px;
+	font-size: 30px;
+	color: gray;
+}
+
+
+
+.head p{
+	font-size: 30px;
+	margin: 5px;
+    color: gray;
+}
+
+/*********main-content***************/
+.main-content{
+      display: flex;
+      justify-content: space-between;
+      background: #F0F0F0;
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 50px;
+}
+
+
+.main-content .form{
+	margin: 1.25rem;
+
+}
+
+.main-content .form .lineform {
+	margin-bottom: 10px;
+}
+
+.main-content .form label{
+	margin-bottom: 0.625rem;
+	padding: 0.625rem;
+	text-align: left;
+}
+
+.main-content .form input[type=text]{
+	margin: 0.625rem;
+	border:none;
+	outline:none;
+	padding: 0.438rem;
+	background: #FFFFFF;
+	padding: 15px 40px;
+}
+
+
+
+
+.booking .booking_head{
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.booking .booking_head i{
+	color: blue;
+}
+
+.booking .booking_head h6{
+	font-size: 15px;
+}
+
+.booking .booking_head span{
+	text-align: center;
+	color: gray;
+	font-size: 11px;
+
+}
+
+.booking_head .street{
+   margin-right: 50px;
+   margin-left: 50px; 
+}
+
+.booking{
+	margin: 20px;
+	background:#FFFFFF;
+	width: 900px;
+	padding: 30px;
+}
+
+
+.booking .timing{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	
+}
+
+.booking .timing >p {
+	background-color: blue;
+   margin: 5px;
+   padding: 10px;
+   font-size: 20px;
+   text-align: center;
+}
+
+/*********footer***************/
+
+.footer {
+    background:#ffffff;
+	text-align: center;
+	padding: 50px;
+	margin-bottom: -100px;
+}
+
+.footer a{
+	
+	background:gray;
+	color:#ffffff;
+	margin: 10px;
+	border-radius: 5px;
+}
+
+.footer .cancel{
+	padding:20px 50px;
+}
+
+ .footer .bnow{
+	background:orange;
+	padding:20px 35px;
+}

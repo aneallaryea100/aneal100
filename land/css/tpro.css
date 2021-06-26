@@ -1,0 +1,315 @@
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+	font-family: arial, helvetica, sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+.first_navbar{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px; 
+	align-items: center;
+	border-bottom: 1px solid gray;
+}
+
+.first_navbar .dash a{
+	margin: 5px;
+	color: gray;
+}
+
+.first_navbar .dash .logo{
+	margin-right: 50px;
+}
+
+.first_navbar .dash .hoj{
+	margin-right: 40px;
+}
+
+.first_navbar .fimg{
+	padding: 8px;
+}
+
+
+/****************second_navbar**********************/
+.second_navbar{
+	border-bottom: 1px solid gray;
+}
+
+
+.second_navbar .snav{
+	margin: 40px 20px 40px 150px;
+}
+
+
+/****************third_navbar**********************/
+.third_navbar {
+	padding: 10px;
+	 border-bottom: 1px solid gray;
+}
+
+.third_navbar .tnav{
+	margin-left: 150px;
+}
+
+.third_navbar .tnav a{
+	margin-right: 70px;
+	padding:px;
+	color: gray;
+}
+
+/****************main_section**********************/
+
+.main_section{
+	margin:0 auto;
+}
+
+.main_section .msfirst{
+	margin-left: 150px;
+}
+
+
+ .main_section .msSecond{
+	margin-left: 150px;
+	width: 1050px;
+}
+
+.main_section .msSecond .themsecond{
+	display: flex;
+	justify-content: space-between;
+	margin:40px 20px 5px 0px;
+	align-items: center;
+}
+
+.main_section .msSecond .themsecond h5{
+	font-size: 50px;
+}
+
+.main_section .msSecond .themsecond h5 span{
+	color:blue;
+}
+
+.main_section .msSecond .themsecond .find input[type=text]{
+     border-top: none;
+     border-right: none;
+     border-left: none;
+     outline: none;
+}
+
+
+.main_section .sectionn_nav{
+	margin-left: 150px;
+	padding-top: 20px;
+	width: 1050px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid gray;
+
+}
+
+
+.main_section .sectionn_nav .bullnav a{
+	margin-right: 40px;
+	color: gray;
+
+}
+
+
+/****************main_section / mini_section **********************/
+.main_section .mini_section{
+	margin-left: 150px;
+	width: 1050px;
+}
+
+.main_section .mini_section  .chart{
+	border:1px solid gray;
+}
+
+.main_section .mini_section  .chart input[type=checkbox]{
+       margin-right: 5px;
+}
+
+
+.main_section .mini_section  .chart .first_chart{
+	padding: 15px 5px 15px 5px;
+	background: blue;
+}
+
+ .main_section .mini_section  .chart .second_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	padding: 10px 5px 5px 0px;
+ 	background: gray;
+ 	
+ }
+
+ .main_section .mini_section  .chart .second_chart > p{
+ 	padding: 0px 30px  ;
+ 	text-align: right;
+ 	
+ }
+
+
+
+ .main_section .mini_section  .chart .third_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border-bottom: 1px solid gray;
+
+ }
+
+  .main_section .mini_section  .chart .third_chart .starts{
+      border-right:  1px solid gray;
+      padding: 10px;
+
+  }
+
+ .main_section .mini_section  .chart .third_chart p i{
+ 	margin:0px 5px;
+ }
+
+
+
+.main_section .mini_section  .chart .fourth_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border-bottom: 1px solid gray;
+ }
+
+ .main_section .mini_section  .chart .fourth_chart .starts{
+      border-right:  1px solid gray;
+      padding: 10px;
+}
+
+ .main_section .mini_section  .chart .fourth_chart p i{
+ 	margin:0px 5px;
+ }
+
+
+.main_section .mini_section  .chart .fifth_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border-bottom: 1px solid gray;
+ }
+
+
+  .main_section .mini_section  .chart .fifth_chart .starts{
+      border-right:  1px solid gray;
+      padding: 10px;
+}
+
+ .main_section .mini_section  .chart .fifth_chart p i{
+ 	margin:0px 5px;
+ }
+
+
+.main_section .mini_section  .chart .sixth_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border-bottom: 1px solid gray;
+ }
+
+  .main_section .mini_section  .chart .sixth_chart .starts{
+      border-right:  1px solid gray;
+      padding: 10px;
+}
+
+
+ .main_section .mini_section  .chart .sixth_chart p i{
+ 	margin:0px 5px;
+ }
+
+
+ .main_section .mini_section  .chart .seventh_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border-bottom: 1px solid gray;
+ }
+
+ .main_section .mini_section  .chart .seventh_chart .starts{
+      border-right:  1px solid gray;
+      padding: 10px;
+}
+
+ .main_section .mini_section  .chart .seventh_chart p i{
+ 	margin:0px 5px;
+ }
+
+
+.main_section .mini_section  .chart .eight_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border-bottom: 1px solid gray;
+ }
+
+
+ .main_section .mini_section  .chart .eight_chart .starts{
+      border-right:  1px solid gray;
+      padding: 10px;
+}
+
+ .main_section .mini_section  .chart .eight_chart p i{
+ 	margin:0px 5px;
+ }
+
+
+.main_section .mini_section  .chart .nineth_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border-bottom: 1px solid gray;
+ }
+
+ .main_section .mini_section  .chart .nineth_chart .starts{
+      border-right:  1px solid gray;
+      padding: 10px;
+}
+
+ .main_section .mini_section  .chart .nineth_chart p i{
+ 	margin:0px 5px;
+ }
+ 
+
+.main_section .mini_section  .chart .tenth_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border-bottom: 1px solid gray;
+ }
+
+  .main_section .mini_section  .chart .tenth_chart .starts{
+      border-right:  1px solid gray;
+      padding: 10px;
+}
+
+
+ .main_section .mini_section  .chart .tenth_chart p i{
+ 	margin:0px 5px;
+ }
+
+
+.main_section .mini_section  .chart .eleventh_chart{
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	border-bottom: 1px solid gray;
+ }
+
+ .main_section .mini_section  .chart .eleventh_chart .starts{
+      border-right:  1px solid gray;
+      padding: 10px;
+}
+
+ .main_section .mini_section  .chart .eleventh_chart p i{
+ 	margin:0px 5px;
+ }
