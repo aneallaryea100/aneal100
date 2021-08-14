@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>the Form</title>
+	
+	
+
+	<style type="text/css">
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+}
+
+#container {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+  color: #1e1e5d;
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+
+}
+
+
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 10px;
+}
+
+.klang{
+	
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #ffd92c;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #ffd92c;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+
+}
+
+
+
+
+.multiselect{
+	margin-top: 15px;
+}
+
+
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+
+
+#checkboxes {
+  display: flex;
+ /* border: 1px #dadada solid;*/
+  margin: 5px;
+  padding: 5px;
+}
+
+#checkboxes label {
+  display: ;
+}
+
+#checkboxes label:hover {
+  background-color: ;
+}
+
+
+@media screen and (min-width: 480px) {
+
+  #container {
+    max-width: 80%;
+    margin: 30% auto;
+    outline: none;
+  }
+
+}
+
+	</style>
+</head>
+<body>
+
+
+
+   <div id="container">
+   	<div class="form">
+
+   		<form id="form" action="#" method="post">
+
+   		<h1>Sign Up</h1>
+
+
+   		<div class="firstName_box">
+   			<input type="text" name="fname" id="first_name" placeholder="First Name" >
+   		</div>
+
+
+   		<div class="secondName_box">
+   			<input type="text" name="Sname" id="second_name" placeholder="Last Name ">
+   		</div>
+
+   		<div class="gender_box">
+   			<label >Gender:</label>
+
+          <input type="radio" name="gender" value="Male"  >
+          <span for="Male" >Male</span>
+          <input type="radio" name="gender" value="Female"  >
+          <span for="Female" >Female</span>
+   		</div>
+
+
+
+
+
+
+
+
+
+   <div class="multiselect">
+    <label>Please select two languages: </label>
+    <div id="checkboxes">
+      <label for="english">
+        <input type="checkbox" name="language"  value="english"/>English</label>
+      <label for="deutsch">
+        <input type="checkbox" name="language" value="deutsch" />Deutsch</label>
+      <label for="francais">
+        <input type="checkbox" name="language" value="francais" />Français</label>
+      <label for="italiano">
+        <input type="checkbox" name="language" value="italiano" />Italiano</label>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+   		<div class="textarea">
+   			<textarea id="bio" name="user_bio" maxlength="100" placeholder="Tell Us About Yourself"></textarea>
+   		</div>
+
+   		<div class="country_box">
+   			
+   			<label for="country">Country:</label>      
+        
+            <select id="country" name="country" class="form-control" >
+                <option value="Afghanistan" name="country">Afghanistan</option>
+                <option value="Åland Islands" name="country">Åland Islands</option>
+                <option value="Albania" name="country">Albania</option>
+                <option value="Algeria" name="country">Algeria</option>
+                <option value="American Samoa" name="country">American Samoa</option>
+                <option value="Andorra" name="country">Andorra</option>
+                <option value="Angola" name="country">Angola</option>
+                <option value="Anguilla" name="country">Anguilla</option>
+                <option value="Egypt" name="country">Egypt</option>
+                <option value="Ethiopia" name="country">Ethiopia</option>
+                <option value="Gabon" name="country">Gabon</option>
+                <option value="Gambia" name="country">Gambia</option>
+                <option value="Ghana" name="country" selected="selected">Ghana</option>
+                <option value="Guinea" name="country">Guinea</option>
+                <option value="Guinea-bissau" name="country">Guinea-bissau</option>
+                <option value="Kenya" name="country">Kenya</option>
+                <option value="Lesotho" name="country">Lesotho</option>
+                <option value="Liberia" name="country">Liberia</option>
+                <option value="Madagascar" name="country">Madagascar</option>
+                <option value="Mali" name="country">Mali</option>
+                <option value="Morocco" name="country">Morocco</option>
+                <option value="Mozambique" name="country">Mozambique</option>
+                <option value="Namibia" name="country">Namibia</option>
+                <option value="Niger" name="country">Niger</option>
+                <option value="Nigeria" name="country">Nigeria</option>
+                <option value="Rwanda" name="country">Rwanda</option>
+                <option value="Sao Tome and Principe" name="country">Sao Tome and Principe</option>
+                <option value="Senegal" name="country">Senegal</option>
+                <option value="Seychelles" name="country">Seychelles</option>
+                <option value="Sierra Leone"name="country">Sierra Leone</option>
+                <option value="Somalia" name="country">Somalia</option>
+                <option value="South Africa" name="country">South Africa</option>
+                <option value="Sudan" name="country">Sudan</option>
+                <option value="Swaziland" name="country">Swaziland</option>
+                <option value="Tanzania, United Republic of" name="country">Tanzania, United Republic of</option>
+                <option value="Timor-leste">Timor-leste</option>
+                <option value="Togo" name="country">Togo</option>
+                <option value="Tunisia" name="country">Tunisia</option>
+                <option value="Uganda" name="country">Uganda</option>
+                <option value="United Arab Emirates" name="country">United Arab Emirates</option>
+                <option value="United Kingdom" name="country">United Kingdom</option>
+                <option value="United States" name="country">United States</option>
+                <option value="Western Sahara" name="country">Western Sahara</option>
+                <option value="Yemen">Yemen</option>
+                <option value="Zambia" name="country">Zambia</option>
+                <option value="Zimbabwe" name="country">Zimbabwe</option>
+            </select>
+
+
+   		</div>
+
+
+   		<div class="submit_box">
+   			<button  type="submit"  class="btn">Submit</button>
+   		</div>
+
+      </form>
+
+   
+
+
+   	</div>
+   </div>
+
+<!-- <script type="text/javascript" src="formcalll.js"></script> -->
+<script>
+
+   // grab form id
+let form = document.getElementById("form");
+   
+   
+
+   // prevent the form from auto submission when clicked 
+   form.addEventListener('submit', function(e){
+   	e.preventDefault()
+
+    // introduce the variables for the form
+     let ball = document.getElementById('first_name').value;
+     let volley = document.getElementById('second_name').value;
+     let myGender =  document.getElementsByName('gender'); 
+     let check_gender = false;
+     let langgg = document.getElementsByName('language');
+     let count = false;
+     let bio = document.getElementById('bio').value;
+     let country = document.getElementsByName('country');
+     let country_selectt = false;
+     
+
+      // conditional statements
+
+
+// first name
+   	if( ball  === '' ){
+      	alert("please enter your first name");
+      	return false
+        console.log('first name: ' + ball);
+      }
+
+      // second name
+      if(volley === ''){
+        alert("please enter your second name");
+        return false
+      }
+
+      // gender radio buttons
+
+      for(let i =0; i < myGender.length; i++){
+        if(myGender[i].checked){
+          check_gender = true; break;
+
+        }
+      }if(!check_gender){
+        alert('please select your gender');
+        return false
+      }
+
+     // language selections
+     for(let i = 1; i < langgg.length; i++) {
+        if(langgg[i].checked ){
+          count = true; break;
+        }
+
+     }   if (!count ) {
+        alert('please select your languages');
+        return false
+     }
+
+     
+     // text area biography
+      if(bio === ''|| bio.length < 10 || bio.length > 100 ){
+           alert("please tell us about Yourself");
+           return false
+      }
+
+     
+     //country selection
+     for( let i =0; i < country.length; i++ ){
+       if (country[i].selected){
+        
+          country_selectt = true; break;
+
+         
+       }
+     }   if(!country_selectt) {
+          alert('please select your country');
+          return false
+
+          
+     }
+      
+      
+
+      // form submission
+      else{
+        alert("new user created");
+      }
+
+       
+       // data in the console
+
+     console.log('first name: ' + ball);
+     console.log( 'second name: ' + volley);
+     console.log('Gender:' +  myGender[0].value);
+     console.log('the languages selected are : ' + langgg[0].value + '  and  '   + langgg[1].value);
+     console.log('biography: ' + bio);
+     
+     
+     // reset the form
+     this.reset();
+   	
+   });
+
+
+</script>
+   </body>
+</html>
