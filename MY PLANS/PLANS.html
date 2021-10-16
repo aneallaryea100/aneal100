@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MY PLANS</title>
+     <!--================= MY STYLING GOES HERE ======================-->
+	<style type="text/css">
+		
+     *{
+     	margin: 0;
+     	padding: 0;
+     	box-sizing: border-box;
+     }
+
+     a{
+     	text-decoration: none;
+     }
+
+     ul{
+     	list-style-type:  disc; /*"\1F44D"*/
+     }
+
+     body{
+     	background-color: black;
+     }
+
+     .wrapper{
+
+       	text-align: center;
+     	width: 800px;
+     	margin:20px auto;
+     	background-color: #fff;
+     	height: 600px;
+     	scroll-behavior: inherit;
+     	outline: none;
+     	overflow: scroll;
+     	overflow-x: hidden;
+     	border-radius: 8px;
+
+     }
+    
+
+
+     .plans__header {
+     	text-align: center;
+     	margin:20px; 
+     }
+
+     .page__title{
+     	margin: 10px 10px;
+     }
+
+     .page__title h1{
+     	text-decoration: underline /*overline*/ #FF3028;
+     	margin-bottom: 8px;
+     	text-decoration-style: double;
+
+     }
+
+     .page__title p {
+     	font-weight:500;
+     }
+
+     #plans__input{
+     	padding: 10px;
+     	border-radius: 5px;
+     	outline: none;
+     	border: 1px solid gray; 
+     }
+
+     .edit__planInput{
+     	padding: 10px;
+     	border-radius: 5px;
+     	outline: none;
+     	border: 1px solid gray;
+     }
+
+     .plans__btn{
+      background-color:#FF3028;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			color: #FFF;
+     }
+
+     .btn__save{
+      background-color:green;
+			border: none;
+			padding: 10px 15px;
+			border-radius: 5px;
+			color: #FFF;
+     }
+
+     .btn__cancel{
+     	background-color:gray ;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			color: #FFF;
+     }
+
+     .edit__warning{
+      background-color:lightblue ;
+			border: none;
+			padding: 10px 15px;
+			border-radius: 5px;
+			color: #FFF;
+			margin-left: 10px;
+     }
+
+     .delete__warning{
+      background-color:red ;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			color: #FFF;
+     }
+
+
+     .main__plans{
+     	display: flex;
+     	justify-content: space-between;
+     	align-items: center;
+     	margin: auto 100px;
+     }
+
+     .table__content{
+     	display: flex;
+     	flex-direction: column;
+     	/*align-items: center;*/
+     	margin: auto 100px;
+     	
+     }
+
+    
+
+     .count__box{
+     	height: 40px;
+	    width: 40px;
+	    border-radius: 50%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: #FF3028;
+	    color: #FFF;
+     }
+
+     .edit__box{
+     	display: none;
+       	max-width: 80%;
+       	margin: auto;
+       	margin-top: 10px;
+     }
+
+     .edit__show{
+     	display: block;
+     }
+
+     #myplans .row__table{
+     	display: flex;
+     	justify-content: space-between;
+     	margin-top: 10px;
+     	align-items: center;
+     }
+
+     tr{
+       	background-color: aliceblue;
+       	padding-right:10px;
+       	text-align:left;
+       	padding: 5px;
+       }
+     
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="big__header">
+ <!--========== PAGE TITLE =============-->
+ <div class="plans__header">
+  <div class="page__title">
+  	<h1>My PLANs</h1>
+  	<p>I'm getting them done by close of the day.</p>
+  </div>
+
+
+ <!--=========== FORM INPUT & PLANS BUTTON ============-->
+  <div class="plans__form">
+    <form action="javascript:void(0);" method="POST" onsubmit="addToPlans()" autocomplete="off">
+ 		 <input type="text" id="plans__input" maxlength="70" size="50" placeholder="What are your plans for the day?">
+ 		<input type="submit" value="Add to Plans"  class="plans__btn">
+ 	  </form>
+  </div> 
+ </div>
+
+<!--================== PLANS COUNTER ===============-->
+   <div class="main__plans">
+ 	 <h2>PLANs:</h2>
+
+ 	  <div class="count__box">
+ 		<p id="counter">0</p>
+ 	 </div>
+ 	</div>
+ </div>
+<!--======================= TABLE CONTENT ================-->
+<div class="table__content">
+	<table>
+		<tbody id="myplans"></tbody>
+	</table>
+</div>
+
+<!--======================= EDIT BOX ================-->
+<div class="edit__box" id="edit__box">
+	<form action="javascript:void(0);" method="POST" id="save__edit" autocomplete="off">
+		<input type="text" class="edit__planInput" id="edit__planInput" maxlength="70" size="50">
+		<input type="submit" value="Save" class="btn__save">
+		<input type="submit" value="Cancel" class="btn__cancel" onclick="closeInput()">
+	</form>
+</div>
+
+
+
+
+
+
+
+
+
+</div> 
+
+</body>
+
+<!--======================= MY SCRIPTING OR FUNCTIONALITY GOES HERE =====================-->
+<script type="text/javascript">
+
+	let plans = document.getElementById('myplans');
+	let planList = [];
+
+	/*========= MYPLANS FUNCTION ================*/
+	function fetchPlans(){
+		let planData = '';
+
+		if( planList.length > 0 ){
+			for( i=0;  i < planList.length; i++ ){
+				planData += `<tr class="row__table" >
+				              
+                              <td> 
+                                 <ul>
+                                   <li>${planList[i]}</li>
+                                 </ul>  
+                               </td>
+                               
+                               
+                               <td><button onclick="editPlans('${i}')" class="edit__warning">Edit</button>
+
+                               <button onclick="deleteInput('${i}')" class="delete__warning">Delete</button>
+                               </td>
+                               
+
+				           </tr>`;
+			}
+		}
+         justCount(planList.length);
+		return plans.innerHTML = planData;
+	}
+
+
+	/*============= ADD FUNCTION =================*/
+	function addToPlans(){
+		let addplan = document.getElementById('plans__input');
+		let addInput = addplan.value;
+
+		if(addInput){
+			planList.push(addInput.trim());
+			addplan.value = '';
+			fetchPlans();
+		}
+	};
+
+
+
+
+	/*============= EDIT FUNCTION =================*/
+
+     function editPlans(event){
+     	let editMyPlans = document.getElementById('edit__planInput');
+     	    editMyPlans.value = planList[event]
+     	    
+     	    document.getElementById('edit__box').style.display  ='block';
+               
+
+     	     document.getElementById('save__edit').onsubmit = function(){
+     	     	let editInput =  editMyPlans.value;
+
+     	     	if(editInput){
+     	     		planList.splice(event, 1, editInput.trim());
+     	     		fetchPlans();
+     	     		closeInput();
+     	     	}
+     	     }
+          };
+
+
+
+
+          /*============= DELETE FUNCTION =================*/
+          function deleteInput(deleted){
+          	planList.splice(deleted, 1)
+          	fetchPlans();
+          }
+
+
+      /*============= counter FUNCTION =================*/
+      function justCount(count){
+      	let counts = document.getElementById('counter');
+
+      	counts.innerHTML = count; 
+      }
+      
+
+
+
+
+
+
+
+
+
+     function closeInput(){
+     	document.getElementById('edit__box').style.display = 'none';
+     }
+
+     
+	
+
+
+	console.log('i am working');
+</script>
+</html>
+
