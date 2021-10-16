@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DATA ROOM</title>
+  <!--================ STYLING GOES HERE =============-->
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		a{
+			text-decoration: none;
+			margin-left: 20px;
+			cursor: pointer;
+
+		}
+
+		a:hover{
+			text-decoration: underline #fff;
+		}
+
+		ul{
+			list-style-type: none;
+		}
+
+		label{
+			color: #FFF;
+		}
+
+		input[type=text] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			cursor: pointer;
+			outline-color: gray;
+		}
+
+		.container{
+			margin: 10px 30px ;
+		}
+		
+		header{
+			margin: 5px 20px;
+			display: flex;
+			justify-content: space-between;
+			width: 98%;
+			height: 60px;
+			background-color: gray;
+			align-items: center;
+			padding: 0px 10px;
+			color: #FFF;
+
+		}
+
+		.menu{
+			display: flex;
+			justify-content: space-between;
+		}
+/*===============FORM TABLE==========================*/
+
+		.table{
+			width: 98%;
+			margin: 20px;
+			background-color: #666;
+			display: flex;
+			flex-direction: row;
+			
+		}
+
+		.form__table{
+			width: 230px;
+			margin: 20px;
+		}
+
+		.hide{
+			display: none
+		}
+
+		label.name__message,.emp__message,.branch__message,.department__message,.role__message,.zone__message{
+			color: red;
+			margin-left:5px;
+		}
+
+		/*=================== DATA TABLE==========================*/
+         .dataroom__table{
+			width: 90%;
+			background-color: #FFF;
+			margin: 20px;
+			text-align: center;
+			scroll-behavior: inherit;
+     	    outline: none;
+     	    overflow: scroll;
+     	    /*overflow-x: hidden;*/
+     	    border-radius: 8px;
+     	    padding: 10px 20px;
+     	    text-transform: uppercase;
+
+		}
+
+
+		.dataroom__table > table{
+			width: 100%;
+		}
+
+		.dataroom__table th{
+			background-color: gray;
+			padding: 5px 10px;
+			color: #FFF;
+		}
+
+		#major__table td{
+			background-color: gray;
+			color: #FFF;
+			padding: 5px 8px;
+			text-transform: uppercase;
+		}
+
+
+		
+
+
+
+
+
+
+		/* ======================  BUTTONS ======================  */
+		.btn__submit{
+			background-color:gray ;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			color: #FFF;
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			/*border: 1px solid #ccc;
+			border-radius: 4px;*/
+			cursor: pointer;
+		}
+
+		.edit__btn{
+           background-color:lightblue ;
+			border: none;
+			padding: 2px 10px;
+			border-radius: 5px;
+			color: #FFF;
+			
+		}
+
+		.delete__btn{
+            background-color:red ;
+			border: none;
+			padding: 2px 4px;
+			border-radius: 5px;
+			color: #FFF;
+		
+		}
+
+
+	</style>
+</head>
+<body>
+      <div class="container">
+
+      <header>
+      	<div class="title"><h1>DATAROOM</h1></div>
+      	<div class="nav">
+      		<ul class="menu">
+      			<a><li>Home</li></a>
+      			<a><li>Deparment</li></a>
+      			<a><li>Tools</li></a>
+      			<a><li>Analysis</li></a>
+      		</ul>
+      	</div>
+      </header>
+  
+
+
+
+
+	<!--========== DATA INPUT TABLE ===========-->
+	<div class="table">
+		<table>
+			<tr>
+				<td>
+					<div class="form__table">
+						<form autocomplete="off" onsubmit="event.preventDefault();onDataSubmit();">
+							<div>
+								<label>Full Name*</label><label class="name__message hide" id="name__error">NAME REQUIRED!</label>
+								<input type="text" name="fullName" id="fullName">
+							</div>
+
+							<div>
+								<label>EMP-ID*</label><label class="emp__message hide" id="emp__error">EMP-ID REQUIRED!</label>
+								<input type="text" name="empId" id="empId">
+							</div>
+
+
+							<div>
+								<label>BRANCH*</label><label class="branch__message hide" id="branch__error">BRANCH REQUIRED!</label>
+								<input type="text" name="branch" id="branch">
+							</div>
+
+							<div>
+								<label>DEPARTMENT*</label><label class="department__message hide" id="department__error">DEPARtMENT REQUIRED!</label>
+								<input type="text" name="department" id="department">
+							</div>
+
+							<div>
+								<label>ROLE*</label><label class="role__message hide" id="role__error">ROLE REQUIRED!</label>
+								<input type="text" name="role" id="role">
+							</div>
+
+							<div>
+								<label>ZONE*</label><label class="zone__message hide" id="zone__error">zONE REQUIRED!</label>
+								<input type="text" name="zone" id="zone">
+							</div>
+
+							<div class="form__button">
+								<input type="submit" value="Submit" class="btn__submit">
+							</div>
+	
+						</form>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+
+
+       <!--=============  DATA ROOM TABLE OF EMPLOYEES ================-->
+		<div class="dataroom__table">
+			<table class="data__list" id="data__list">
+				<thead>
+					<tr class="table__header">
+						<th>Full Name</th>
+						<th>EMP-ID </th>
+						<th>Branch</th>
+						<th>Department</th>
+						<th>Role</th>
+						<th>ZONE</th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tbody id="major__table">
+					
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+
+</div>
+</body>
+
+<!--============ JAVASCRIPT GOES HERE ======-->
+
+<script type="text/javascript">
+
+	let dataInput = null;
+
+	/*======= SUBMIT DATA TO DATA ROOM ========*/
+
+	function onDataSubmit(){
+       if( formValidate() ){
+       	 let formData = readData();
+       	 if(dataInput == null){
+       	 	insertNewData(formData);
+       	 }else{
+       	 	updateData(formData);
+       	 }
+
+       	 resetDataForm()
+       }
+	}
+
+
+    /*======= GET AND READ DATA FROM INPUT FIELD ========*/
+	function readData(){
+       var formData = {};
+       formData['fullName'] = document.getElementById('fullName').value;
+       formData['empId'] = document.getElementById('empId').value;
+       formData['branch'] = document.getElementById('branch').value;
+       formData['department'] = document.getElementById('department').value;
+       formData['role'] = document.getElementById('role').value;
+       formData['zone'] = document.getElementById('zone').value;
+       return formData;
+
+	} 
+ 
+ /*======= INSERT DATA INTO DATAROOM FORM ========*/
+	function insertNewData(data){
+       
+
+       let table = document.getElementById('data__list').getElementsByTagName('tbody')[0] ;
+
+       let dataRows = table.insertRow(table.length);
+           dataCell1 = dataRows.insertCell(0);
+           dataCell1.innerHTML = data.fullName;
+           dataCell2 = dataRows.insertCell(1);
+           dataCell2.innerHTML = data.empId;
+           dataCell3 = dataRows.insertCell(2);
+           dataCell3.innerHTML = data.branch;
+           dataCell4 = dataRows.insertCell(3);
+           dataCell4.innerHTML = data.department;
+           dataCell5 = dataRows.insertCell(4);
+           dataCell5.innerHTML = data.role;
+           dataCell6 = dataRows.insertCell(5);
+           dataCell6.innerHTML = data.zone;
+           dataCell7 = dataRows.insertCell(6);
+           dataCell7.innerHTML = `<button class='edit__btn' onclick='editData(this)'>Edit</button>
+                                  <button class='delete__btn' onclick='deleteData(this)'>Delete</button> `;
+	}
+
+/*======= EDIT DATA FROM DATAROOM FORM ========*/
+	function editData(edits){
+      dataInput = edits.parentElement.parentElement;
+      document.getElementById('fullName').value = dataInput.cells[0].innerHTML;
+      document.getElementById('empId').value = dataInput.cells[1].innerHTML;
+      document.getElementById('branch').value = dataInput.cells[2].innerHTML;
+      document.getElementById('department').value = dataInput.cells[3].innerHTML;
+      document.getElementById('role').value = dataInput.cells[4].innerHTML;
+      document.getElementById('zone').value = dataInput.cells[5].innerHTML;
+
+	}
+
+/*======= UPDATE DATA AFTER EDITING TO DATAROOM FORM ========*/
+	function updateData(updated){
+        dataInput.cells[0].innerHTML = updated.fullName; 
+        dataInput.cells[1].innerHTML = updated.empId;
+        dataInput.cells[2].innerHTML = updated.branch;
+        dataInput.cells[3].innerHTML = updated.department;
+        dataInput.cells[4].innerHTML = updated.role;
+        dataInput.cells[5].innerHTML = updated.zone;
+        
+	}
+
+
+	/*======= DELETE DATA FROM DATAROOM ========*/
+	function deleteData(delData){
+      let delRow = delData.parentElement.parentElement;
+      document.getElementById('data__list').deleteRow(delRow.rowIndex);
+      resetDataForm();
+	}
+
+
+   /*======= RESET DATA INPUTS FIELD / EMPTY INPUT FIELDS ========*/
+	function resetDataForm(){
+       document.getElementById('fullName').value = '';
+      document.getElementById('empId').value = '';
+      document.getElementById('branch').value = '';
+      document.getElementById('department').value = '';
+      document.getElementById('role').value = '';
+      document.getElementById('zone').value = '';
+      dataInput = null
+	}
+
+	/*======= VALIDATE DATA FORM ========*/
+
+     function formValidate(){
+     	isValid = true;
+
+     	if (document.getElementById('fullName').value == '') {
+     		isValid = false;
+     		document.getElementById('name__error').classList.remove('hide');
+     	}else{
+     		isValid = true;
+     		if(!document.getElementById('name__error').classList.contains('hide'))
+     			document.getElementById('name__error').classList.add('hide');
+     	}
+
+
+     	if (document.getElementById('empId').value == '') {
+     		isValid = false;
+     		document.getElementById('emp__error').classList.remove('hide');
+     	}else{
+     		isValid = true;
+     		if(!document.getElementById('emp__error').classList.contains('hide'))
+     			document.getElementById('emp__error').classList.add('hide');
+     	}
+
+
+     	if (document.getElementById('branch').value == '') {
+     		isValid = false;
+     		document.getElementById('branch__error').classList.remove('hide');
+     	}else{
+     		isValid = true;
+     		if(!document.getElementById('branch__error').classList.contains('hide'))
+     			document.getElementById('branch__error').classList.add('hide');
+     	}
+
+     	if (document.getElementById('department').value == '') {
+     		isValid = false;
+     		document.getElementById('department__error').classList.remove('hide');
+     	}else{
+     		isValid = true;
+     		if(!document.getElementById('department__error').classList.contains('hide'))
+     			document.getElementById('department__error').classList.add('hide');
+     	}
+
+
+     	if (document.getElementById('role').value == '') {
+     		isValid = false;
+     		document.getElementById('role__error').classList.remove('hide');
+     	}else{
+     		isValid = true;
+     		if(!document.getElementById('role__error').classList.contains('hide'))
+     			document.getElementById('role__error').classList.add('hide');
+     	}
+
+
+     	if (document.getElementById('zone').value == '') {
+     		isValid = false;
+     		document.getElementById('zone__error').classList.remove('hide');
+     	}else{
+     		isValid = true;
+     		if(!document.getElementById('zone__error').classList.contains('hide'))
+     			document.getElementById('zone__error').classList.add('hide');
+     	}
+
+
+     	return isValid;
+     }
+
+
+
+	
+	console.log('i am working');
+</script>
+</html>
