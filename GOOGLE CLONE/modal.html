@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>modal example</title>
+
+	<style type="text/css">
+
+		*{
+			padding:0;
+			margin:0;
+			box-sizing: border-box; 
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		ul{
+			list-style-type: none;
+		}
+		
+/*================== modal ====================*/
+
+/*========== content 1 ============*/
+.modal__wrapper{
+	       /*display:none;*//*hidden by default*/
+			position:fixed;/*stay in place*/
+			z-index: 1;/*sit on top*/
+			left:0;
+			top:0;
+			width:100%;/*full widht*/
+			height: 100%;/*full height */
+			overflow: none;/*Enable scroll if needed*/
+			background-color: rgb(0,0,0);/*fallback color*/
+			background-color: rgb(0,0,0,0.4)/*back w/opacity*/;
+			padding-top: 5px;
+
+	
+}
+
+.modal__content{
+	background-color: #fefefe;
+	width: 728px;
+	margin:5rem auto;
+	padding: 1rem 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	border-radius: 1.5rem;
+	overflow-y: hidden;
+	box-shadow: 0 0 16px rgb(0 0 0 / 12%), 0 16px 16px rgb(0 0 0 / 12%);
+	border: 1px solid transparent;
+}
+
+.title{
+	background-color: #FFF;
+	width: 100%;
+	text-align: ;
+	margin-bottom: -7px;
+}
+
+.title .modal__title{
+	margin-left: 12.5rem;
+}
+
+
+.modal__grid{
+	display: flex;
+	justify-self: space-evenly;
+}
+
+
+.modal__content1{
+	background-color: ;
+	width: 180px;
+	height: 132px;
+	text-align: center;
+	margin-top: 30px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+.customize__modal-services > li{
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+    /*========== content 2 ============*/
+.modal__content2{
+	background-color: ;
+	width: 400px;
+	padding: 2rem;
+	margin-left: 2rem;
+	margin-right: 10rem;
+}
+
+.modal__content2-box{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 0;
+}
+
+
+.content2__upload{
+	background-color: ;
+	padding: 1rem 2rem;
+	text-align: center;
+	width: 180px;
+	height: 132px;
+	margin-right: 2rem;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid gray;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.content2__classic{
+	background-color: ;
+	padding: auto auto;
+	width: 180px;
+	height: 132px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid gray;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.content2__img{
+ 
+}
+
+
+.content2__chrome{
+	cursor: pointer;
+	margin-left: 12rem;
+	margin-top: .9rem;
+}
+
+/*.content2__chrome >p{
+	margin-left: -5px;
+}
+*/
+
+
+.button_container {
+	display: flex;
+	justify-content: flex-end;
+	margin-top:100px;
+	margin-right: 1rem;
+}
+
+
+.button_container .btn-cancel{
+	padding: 9px 15px;
+	margin-right: 1rem;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 0 15px rgb(0 0 0 / 15%), 0 10px 10px rgb(0 0 0 / 15%);
+}
+
+.button_container .btn-done{
+	padding: 9px 15px;
+	margin-right: 1rem;
+	background-color: blue;
+	color: #FFF;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgb(0 0 0 / 5%), 0 5px 5px rgb(0 0 0 / 5%);
+}
+
+
+.selected{
+	background-color: blue;
+	padding: .5rem;
+	border-left: hidden;
+}
+
+	</style>
+
+</head>
+<body>
+   <!-- ========== MODAL ==================-->
+   <div class="modal__wrapper">
+   	<div class="modal__content">
+   	<div class="title">
+   		<p class="modal__title">Customize this page</p>
+   	</div>
+   	
+         <div class="modal__grid">
+            <!-- ========== CUSTOMIZE CONTENT 1 ==================-->
+            <div class="modal__content1">
+               <ul class="customize__modal-services">
+                  <li class="selected">
+                     <i></i>
+               <span>Background</span>
+            </li>
+
+            <li>
+               <i></i>
+               <span>customize</span>
+            </li>
+
+            <li>
+               <i></i>
+               <span>Color and theme</span>
+            </li>
+               </ul>
+               
+            </div>
+
+            <!-- ========== CUSTOMIZE CONTENT 2 ==================-->
+
+            <div class="modal__content2">
+               <div class="modal__content2-box">
+                  <div class="content2__upload">
+                     <i></i>
+                     <p>upload to device</p>
+                  </div>
+                   
+                   
+                  <div class="content2__classic ">
+                     <div class="content2__img">IMAGE</div>
+                 </div>
+                  
+               </div>
+               <div class="content2__chrome">
+               	<p>classic chrome</p>
+               </div>
+            </div>
+         </div>
+         <!-- ========== CUSTOMIZE CONTENT 3 ==================-->
+
+            <div class="button_container">
+               <a href="#" type="button" class="btn-cancel">Cancel</a>
+               <a href="#" type="button" class="btn-done">Done</a>
+            </div>
+         </div>
+      </div>
+</body>
+</html>
