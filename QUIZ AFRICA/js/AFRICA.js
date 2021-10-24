@@ -1,48 +1,48 @@
 const quizAfrica = [
    {
-   	question: "Which language runs in a web browser?",
-         	a:"Java",
-         	b: "C",
-         	c:"Python",
-         	d:"javascript",
-         	correct: "d",
+   	question: "Which country is Cyrenaica a part?",
+         	a:"Tunisia",
+         	b: "Egypt",
+         	c:"Lybia",
+         	d:"Tanzania",
+         	correct: "c",
    }, 
 
    {
-   	question: "What is the capital city of Ghana?",
-   	a:"Kumasi",
-   	b:"Cairo",
-   	c:"Accra",
-   	d:"Tamale",
-   	correct: "c",
+   	question: "The longest African river which emptying into the indian Ocean is?",
+   	a:"River Nile",
+   	b:"Zambezi river",
+   	c:"Niger River",
+   	d:"Benue River",
+   	correct: "b",
    }, 
 
    {
-   	question: "What is the capital city of Ghana?",
-   	a:"Kumasi",
+   	question: "The Northernmost city in Africa is ?",
+   	a:"Fes",
    	b:"Cairo",
-   	c:"Accra",
-   	d:"Tamale",
-   	correct: "c",
+   	c:"Rabat",
+   	d:"Bizerte",
+   	correct: "d",
    }, 
 
 
   {
-   	question: "What is the capital city of Ghana?",
-   	a:"Kumasi",
-   	b:"Cairo",
-   	c:"Accra",
-   	d:"Tamale",
-   	correct: "c",
+   	question: "The westernmost city of Africa?",
+   	a:"Conakry",
+   	b:"Dakar",
+   	c:"Porto-Novo",
+   	d:"Gao",
+   	correct: "b",
    }, 
 
    {
-   	question: "What is the capital city of Ghana?",
-   	a:"Kumasi",
-   	b:"Cairo",
-   	c:"Accra",
-   	d:"Tamale",
-   	correct: "c",
+   	question: "What is the area of land in Egypt which is below sea level?",
+   	a:"Qattara Depression",
+   	b:"Denakil Depression",
+   	c:"Sebkha Tah",
+   	d:"Lake Moeris",
+   	correct: "a",
    }, 
 
 ];
@@ -70,11 +70,11 @@ function currentQuiz(){
 
 	const quizAfricaData = quizAfrica[activeQuiz];
 
-	questionsAfric.innerText = quizAfrica.question
-	first_lab.innerText =quizAfrica.a
-	second_lab.innerText =quizAfrica.b
-	third_lab.innerText =quizAfrica.c
-	fourth_lab.innerText =quizAfrica.d
+	questionsAfric.innerText = quizAfricaData.question
+	first_lab.innerText =quizAfricaData.a
+	second_lab.innerText =quizAfricaData.b
+	third_lab.innerText =quizAfricaData.c
+	fourth_lab.innerText =quizAfricaData.d
 }
 
 
